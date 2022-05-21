@@ -1,0 +1,27 @@
+<ion-app>
+    <div class="topBar">
+        <div class="tituloTopBar">
+        <h1>Nueva Libretina</h1>
+        </div>
+    </div>
+    <ion-content>
+        <div class="inputsForm">
+            <ion-item>
+                <ion-label class="tituloInput" position="floating">Nombre</ion-label>
+                <ion-input class="tituloInput" #nombre></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label class="tituloInput" position="floating">Apellidos</ion-label>
+                <ion-input class="tituloInput" #apellidos></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label class="tituloInput" position="floating">Foto url</ion-label>
+                <ion-input class="tituloInput" #url_foto></ion-input>
+            </ion-item>
+            
+        </div>  
+        <div class="botonesForm">
+            <button class="buttonGuardar" role="button" (click)="guardarLibretina(nombre.value, apellidos.value, url_foto.value)">Guardar</button>
+        </div>
+    </ion-content>
+</ion-app>
