@@ -1,4 +1,92 @@
-<h1>{{libretina.nombre}}</h1>
-<h1>{{libretina.apellido}}</h1>
-<img src={{libretina.url_foto}} alt="">
-aaaa
+<ion-app>
+    <!-- hacer row con columnas para colocar los elementos -->
+    <ion-toolbar>
+        <div class="topBar">
+            <ion-row>
+                <ion-col>
+                    <!--<img src={{libretina.url_foto}} alt=""> -->
+                </ion-col>
+                <ion-col class="tituloTopBar">
+                    <h1>{{libretina.nombre}} {{libretina.apellido}}</h1>
+                </ion-col>
+                <ion-col>
+                   
+                </ion-col>
+            </ion-row>
+
+        </div>
+        <div class="subBar">       
+            <input type="date" name="fecha" id="fecha" #fecha value={{fechaHoy}} class="fecha" placeholder="Fecha">
+        </div>
+
+       
+    </ion-toolbar>
+
+    <ion-content>
+        <div class="tarea primerAdd">
+            <ion-row>
+                <ion-col>
+                    <ion-fab horizontal="center">
+                        <ion-fab-button>
+                            <ion-icon name="add-outline"></ion-icon>
+                        </ion-fab-button>
+                        <ion-fab-list side="end">
+                                <ion-fab-button (click)="addNuevaNotaNav(libretina.id, fecha.value)">
+                                    <ion-icon name="bookmark-outline"></ion-icon>
+                                </ion-fab-button>
+                        </ion-fab-list>
+                        <ion-fab-list side="start">
+                              
+                        </ion-fab-list>    
+                    </ion-fab>
+                </ion-col>
+            </ion-row>
+            <div class="linea">
+            </div>
+        </div>
+
+        <div class="tarea" *ngFor="let notaa of notashorarios">
+            <div *ngIf="notaa.tipo == 'nota'; then nota; else horario"></div>
+            <ng-template #nota>
+                <div class="tarea">
+                    <ion-row>
+                        <ion-col size="10">
+                            <h3>{{notaa.titulo}}</h3>
+                        </ion-col>
+                    </ion-row>
+                </div>
+            </ng-template>
+
+            <ng-template #horario>
+                <div class="horario">
+                    <div class="contenidoHorario" [ngStyle]="{'background-color':notaa.color+'59'}">
+                        <ion-row>
+                            <ion-col size="2">
+                                <p>{{notaa.horaInicio}}</p>
+                            </ion-col>
+                            <ion-col size="8">
+                                <p class="titulitoHorario">{{notaa.titulo}}</p>
+                            </ion-col>
+                            <ion-col size="2">
+                                <div class="ajustesHorario">
+                                    <ion-icon name="ellipsis-horizontal-outline"></ion-icon>
+                                </div>
+                            </ion-col>
+                        </ion-row>
+                        
+                        <ion-row>
+                            <ion-col size="2">
+                                <p>{{notaa.horaFin}}</p>
+                            </ion-col>
+                        </ion-row>
+                    </div>
+                </div>
+            </ng-template>
+        </div>
+
+    </ion-content>
+
+
+
+</ion-app>
+
