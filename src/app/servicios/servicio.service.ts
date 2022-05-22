@@ -25,7 +25,10 @@ export class ServicioService {
   createLibretina(libretina:Libretina){
     return this.http.post(API_URL+'/api/libretina',libretina);
   }
-  getNotasHorarioFecha(id_libretina:any, fecha:Date){
+  getNotasHorarioFecha(id_libretina:any, fecha:any){
     return this.http.get(API_URL+'/api/nota/'+id_libretina+'/'+fecha);
+  }
+  createNota(id_libretina:any, fecha:any, nota:any){
+    return this.http.post(API_URL+'/api/nota/'+id_libretina+'/'+fecha,nota);
   }
 }

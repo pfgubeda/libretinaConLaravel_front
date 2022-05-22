@@ -16,7 +16,7 @@
 
         </div>
         <div class="subBar">       
-            <input type="date" name="fecha" id="fecha" #fecha value={{fechaHoy}} class="fecha" placeholder="Fecha">
+            <input type="date" name="fecha" id="fecha" #fecha [value]='fecha' class="fecha" placeholder="Fecha" (change)="infoNuevaFecha(fecha.value)">
         </div>
 
        

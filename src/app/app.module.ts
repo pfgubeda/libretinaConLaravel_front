@@ -13,13 +13,15 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import {MatNativeDateModule} from '@angular/material/core';
 import {MatInputModule} from '@angular/material/input';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NuevaNotaComponent } from './componentes/nueva-nota/nueva-nota.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LibretinasComponent,
     AddLibretinaComponent,
-    LibretinaJournalComponent
+    LibretinaJournalComponent,
+    NuevaNotaComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,43 @@
+<ion-app>
+ 
+    <ion-toolbar>
+        <div class="topBar">
+            <ion-row>
+                <ion-col>
+
+                </ion-col>
+                <ion-col class="tituloTopBar">
+                    <h1>{{libretina.nombre}} {{libretina.apellido}}</h1>
+                </ion-col>
+                <ion-col>
+
+                </ion-col>
+            </ion-row>
+
+        </div>
+        <div class="subBar">
+            <h1>{{fecha}}</h1>
+        </div>
+
+
+    </ion-toolbar>
+
+    <ion-content>
+        <div class="inputsForm">
+            <ion-item>
+                <ion-label class="tituloInput" position="floating">Título</ion-label>
+                <ion-input class="tituloInput" #titulo></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label class="descripcionInput" position="floating">Descripción</ion-label>
+                <ion-textarea class="descricionInput" #descripcion></ion-textarea>
+            </ion-item>
+        </div>
+        
+        <div class="botonesForm">
+            <button class="buttonGuardar" role="button"
+                (click)="addNota(titulo.value, descripcion.value)">Guardar</button>
+        </div>
+
+    </ion-content>
+</ion-app>

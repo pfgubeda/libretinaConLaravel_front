@@ -15,10 +15,10 @@ export class LibretinaJournalComponent implements OnInit {
 
 
   fechaHoy: Date = new Date();
+  fecha : any = this.fechaHoy.getFullYear() +'-'+ (this.fechaHoy.getMonth()+1) +'-'+ this.fechaHoy.getDate();
   ngOnInit(): void {
     this.ruta.params.subscribe(params => {
       this.id = params['id'];
-      console.log(this.id);
     });
     this.getInfoLibretina();
   }
@@ -27,15 +27,23 @@ export class LibretinaJournalComponent implements OnInit {
   id : any;
   getInfoLibretina(){
     this.servivio.getLibretina(this.id).subscribe(libretinas => this.libretina = libretinas);
-    this.servivio.getNotasHorarioFecha(this.id, this.fechaHoy).subscribe(notashorario => this.notashorarios = notashorario);
-    console.log(this.id, this.fechaHoy);
-    console.log(this.notashorarios);
+    this.servivio.getNotasHorarioFecha(this.id, this.fecha).subscribe(notashorario => this.notashorarios = notashorario);
+    console.log(this.id, this.fecha);
   }
 
-
-  addNuevaNotaNav(id:any, fecha:any){
+  infoNuevaFecha(fecha : any){
     console.log(fecha);
   }
+
+  addNuevaNotaNav(id:any, fechaa:any){
+    if(fechaa == ''){
+      this.router.navigate(['/'+id+'/'+this.fecha]);
+    }else{
+      this.router.navigate(['/'+id+'/'+fechaa]);
+    }
+  }
+
+
 
 
 }
