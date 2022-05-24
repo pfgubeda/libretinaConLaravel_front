@@ -1,0 +1,142 @@
+.topBar{
+    background-color:var(--color-principal);
+}
+
+.topBar img{
+    width: 75%;
+    max-width: 100px;
+    border-radius: 50%;
+    margin: 5%;
+}
+
+.tituloTopBar{
+    text-align: center;
+}
+
+.botonOptionsToolBar{
+    background-color: var(--color-principal);
+    margin-top: 30px;
+    margin-left: 30px;
+}
+
+.libretinaImg{
+    width: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: var(--color-principal);
+}
+
+.subBar{
+    background-color: var(--color-principal);
+    border-top: 2px;
+    border-color: black;
+    border-top-style: dashed;
+    text-align: center;
+    font-size: 2rem;
+    padding-top: 2%;
+    padding-bottom: 3%;
+}
+
+
+.inputsForm{
+    margin-top: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+.inputsForm ion-item{
+    margin-bottom: 2%;
+}
+
+
+.tituloInput{
+    font-size: 1.5rem;
+    width: 70%;
+}
+.descripcionInput{
+    font-size: 1.2rem;
+    width: 100%;
+}
+
+.pickerCalendario{
+    width: 100%;
+    margin-top: 3%;
+}
+
+.diasCheck{
+    margin-top: 3%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+.diasCheck h3{
+    text-align: center;
+}
+.diaCheck{
+    text-align: center;
+    font-size: 1.3rem;
+    margin:3%;
+    background-color: var(--color-principal);
+    border-radius:50%;
+    border:1px solid #D0D0D0;
+    overflow:auto;
+    width: 17%;
+    height: 17%;
+    position: relative;
+}
+
+.diaCheck label{
+    width:4.0em;
+}
+
+.diaCheck label span{
+    text-align:center;
+    padding:3px 0px;
+    display:block;
+}
+
+.diaCheck label input{
+    position:absolute;
+    top:-20px;
+    color: transparent;
+    background-color: transparent;
+    border:0;
+}
+
+.diaCheck input:checked + span{
+    background-color:var(--color-seleccionado);
+    color:black;
+}
+
+
+.botonesForm{
+    text-align: center;
+    margin-top: 15%;
+}
+
+.buttonGuardar {
+  align-items: center;
+  background-color: var(--color-principal);
+  border: 0;
+  border-radius: 100px;
+  box-sizing: border-box;
+  color: black;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: -apple-system, system-ui, system-ui, "Segoe UI", Roboto, "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell, "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-size: 2rem;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 20px;
+  max-width: 480px;
+  min-height: 40px;
+  min-width: 0px;
+  overflow: hidden;
+  padding: 0px;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+  touch-action: manipulation;
+  transition: background-color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, box-shadow 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+}
