@@ -6,6 +6,13 @@ export interface Libretina{
   apellido:string;
   url_foto:string;
 }
+export interface Nota{
+  titulo:string;
+  descripcion:string;
+  fecha : string;
+  tipo : string;
+  libretina_id : string;
+}
 const API_URL = 'http://localhost:8000';
 
 @Injectable({
